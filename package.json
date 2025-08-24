@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:extension": "vite build && copy public\\manifest.json dist\\ && copy src\\contentScript.js dist\\ && copy src\\contentScript.css dist\\",
-    "lint": "eslint .",
-    "preview": "vite preview"
+  "dev": "vite",
+  "build": "vite build && npm run postbuild",
+  "postbuild": "copy public\\manifest.json dist\\ && copy src\\contentScript.js dist\\ && copy src\\contentScript.css dist\\",
+  "lint": "eslint .",
+  "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
